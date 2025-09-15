@@ -88,7 +88,7 @@ volumeMounts:
 volumes:
   - name: appsettings-volume
     configMap:
-      name: dash-valo-management-api-config
+      name: dash-valo-app-api-config
       items:
         - key: appsettings.valo-dev.json
           path: appsettings.valo-dev.json
