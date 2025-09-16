@@ -1,0 +1,13 @@
+{{- range .Values.externalServices }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .name }}
+spec:
+  type: ExternalName
+  externalName: {{ .host }}
+  ports:
+    - port: {{ .port }}
+      targetPort: {{ .port }}
+---
+{{- end }}

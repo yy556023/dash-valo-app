@@ -94,11 +94,12 @@ volumes:
           path: appsettings.valo-dev.json
 
 externalServices:
-  postgresql:
-    enabled: true
-    name: postgresql
+  - name: postgresql
     host: host.minikube.internal
     port: 5432
+  - name: seq
+    host: host.minikube.internal
+    port: 5341
 
 appsettingsFiles:
   - appsettings.valo-dev.json
