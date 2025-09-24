@@ -1,0 +1,21 @@
+{
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.Seq" ],
+    "MinimumLevel": "Information",
+    "WriteTo": [
+      {
+        "Name": "Async",
+        "Args": {
+          "configure": [
+            {
+              "Name": "Seq",
+              "Args": {
+                "serverUrl": "http://seq:5341"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
