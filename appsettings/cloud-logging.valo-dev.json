@@ -1,7 +1,23 @@
 {
   "Serilog": {
     "Using": [ "Serilog.Sinks.Seq" ],
-    "MinimumLevel": "Information",
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning",
+        "Microsoft.Hosting.Lifetime": "Information",
+        "Microsoft.EntityFrameworkCore": "Warning",
+        "Microsoft.EntityFrameworkCore.Database.Command": "Warning",
+        "Microsoft.AspNetCore.Hosting.Diagnostics": "Warning",
+        "Microsoft.AspNetCore.Mvc.Infrastructure": "Warning",
+        "Microsoft.AspNetCore.Routing.EndpointMiddleware": "Warning",
+        "OpenIddict.Validation.OpenIddictValidationDispatcher": "Information",
+        "OpenIddict.Server.OpenIddictServerDispatcher": "Information",
+        "Volo.Abp.AbpApplicationBase": "Information",
+        "Volo.Abp.Identity.IdentityDynamicClaimsPrincipalContributorCache": "Information"
+      }
+    },
     "WriteTo": [
       {
         "Name": "Async",
