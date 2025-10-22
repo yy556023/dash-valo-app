@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ include "dash-valo-app.fullname" . }}-config
+  name: {{ include "dash-valo-app.name" . }}-config
 data:
 {{- range .Values.appsettingsFiles }}
   {{ . }}: |-
