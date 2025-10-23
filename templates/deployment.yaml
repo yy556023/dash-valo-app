@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "dash-valo-app.fullname" . }}
+  name: {{ include "dash-valo-app.name" . }}
   labels:
     {{- include "dash-valo-app.labels" . | nindent 4 }}
 spec:

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "dash-valo-app.fullname" . }}
+  name: {{ include "dash-valo-app.name" . }}
   labels:
     {{- include "dash-valo-app.labels" . | nindent 4 }}
 spec:
